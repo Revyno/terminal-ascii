@@ -1,0 +1,13 @@
+# Preview / scratch output from the converter scripts
+*.preview.png
+preview*.png
+cek*.png
+
+# Raw intermediate frames (should never be committed)
+*.rgb
+*.gray
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

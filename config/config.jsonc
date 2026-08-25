@@ -1,0 +1,87 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  // __FASTFETCH_DIR__ is rewritten to the real install path by install.ps1.
+  //
+  // Swap the logo by pointing "source" at another file in logos/ :
+  //   logos/ascii-anime.txt  "type": "file"      braille line art  (default)
+  //   logos/ascii-wolf.txt   "type": "file"      the original wolf
+  //   logos/logo-ansi.txt    "type": "file-raw"  full-colour block art
+  //
+  // Retrace the braille art from your own picture:
+  //   pwsh scripts/img2braille.ps1 -Image me.png -Cols 36 -Rows 18 -Threshold 90
+  //   lower -Threshold = thinner lines, higher = bolder / more filled
+  //
+  // NOTE: never set "width"/"height" here. For file / file-raw logos fastfetch
+  //       ADDS them to the auto-detected size, pushing the text far to the right.
+  "logo": {
+    "type": "file",
+    "source": "__FASTFETCH_DIR__/logos/ascii-anime.txt",
+    "color": {
+      "1": "#F5E0DC",
+      "2": "#F2CDCD",
+      "3": "#F5C2E7",
+      "4": "#FAB387",
+      "5": "#F9E2AF",
+      "6": "#A6E3A1",
+      "7": "#94E2D5",
+      "8": "#89DCEB",
+      "9": "#74C7EC"
+    },
+    "padding": {
+      "top": 1,
+      "right": 3
+    }
+  },
+
+  "display": {
+    "separator": " "
+  },
+
+  // Keys use Nerd Font glyphs. Without a Nerd Font they render as tofu boxes:
+  //   winget install DEVCOM.JetBrainsMonoNerdFont
+  // then set the font in Windows Terminal settings.
+  "modules": [
+    "break",
+    {
+      "type": "title",
+      "color": {
+        "user": "#F5C2E7",
+        "at": "#CDD6F4",
+        "host": "#89DCEB"
+      }
+    },
+    "break",
+    {
+      "type": "os",
+      "key": "",
+      "keyColor": "#89DCEB"
+    },
+    {
+      "type": "cpu",
+      "key": "",
+      "keyColor": "#F5C2E7"
+    },
+    {
+      "type": "board",
+      "key": "󰚗",
+      "keyColor": "#FAB387"
+    },
+    {
+      "type": "memory",
+      "key": "",
+      "keyColor": "#A6E3A1",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "key": "",
+      "keyColor": "#94E2D5"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
