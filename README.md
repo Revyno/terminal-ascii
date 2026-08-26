@@ -96,6 +96,7 @@ terminal-ascii/
 │       ├── ascii-wolf.txt   # ASCII serigala
 │       └── logo-ansi.txt    # blok warna penuh (foto asli)
 ├── scripts/
+│   ├── generate-logo.ps1    # auto: gambar -> semua file logo di config/logos
 │   ├── img2braille.ps1      # gambar -> braille line art
 │   └── img2ansi.ps1         # gambar -> blok warna penuh
 └── shell/
@@ -119,6 +120,20 @@ Edit `source` di `~/.config/fastfetch/config.jsonc`:
 | `logos/logo-ansi.txt` | `file-raw` | Blok warna penuh, mirip foto aslinya |
 
 ## Pakai gambar sendiri
+
+**Cara cepat (auto)** — satu perintah, langsung nulis ke `config/logos/` pakai
+nama file yang persis dirujuk `config.jsonc` (`ascii-anime.txt` + `logo-ansi.txt`).
+Tanpa argumen dia nge-trace ulang `assets/logo.jpg`:
+
+```powershell
+pwsh scripts/generate-logo.ps1                        # pakai gambar bawaan
+pwsh scripts/generate-logo.ps1 -Image foto.png -Threshold 90
+pwsh scripts/generate-logo.ps1 -Image foto.png -Mode braille   # braille aja
+```
+
+Habis itu jalanin ulang `.\install.ps1` biar kesalin ke `~/.config/fastfetch`.
+
+Mau atur manual per gaya:
 
 **Braille line art** — cocok buat gambar yang outline-nya tegas (anime, logo,
 line art):

@@ -1,9 +1,6 @@
-
-
-# ubah  dengan directory path file kamu sendiri
 param(
-    # [string]$Image  = "C:\Users\User\.config\fastfetch\logo.jpg",
-    # [string]$Out    = "C:\Users\User\.config\fastfetch\logo-ansi.txt",
+    [Parameter(Mandatory)] [string]$Image,   # source picture
+    [Parameter(Mandatory)] [string]$Out,     # output ANSI text file
     [int]$Cols      = 40,   # terminal columns wide
     [int]$Rows      = 20    # terminal rows tall (each row = 2 image pixels)
 )
