@@ -2,22 +2,12 @@
 
 Setup [fastfetch](https://github.com/fastfetch-cli/fastfetch) buat Windows: tiap
 buka terminal, langsung muncul ASCII art berwarna di sebelah kiri dan info sistem
-di sebelah kanan — dan jalan **identik di PowerShell, CMD, sama Git Bash**.
+di sebelah kanan dan jalan **identik di PowerShell, CMD, sama Git Bash**.
 
 Logonya di-trace otomatis dari file gambar apa pun, jadi kamu bisa pakai foto,
 avatar, atau karakter favorit sendiri.
 
-```
-⠀⠀⡰⠃⠀⡄⠀⢠⠀⠀⠀⠀⠈⢣⡀⠀⠀⠀⠀⠀⡀⠀⠳     User@USER
-⡜⠀⠀⠀⡞⠀⠀⠀⡞⠀⠀⠀⠀⠊⢻⡍⠙⠀⠀⢦⠀⠀⢆
-⠀⠀⠀⣸⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠈⡏⢦⠀⠀⢸⠑⣄⠀      Windows 11 Home Single Language (25H2) x86_64
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀      13th Gen Intel(R) Core(TM) i7-13650HX (20) @ 2.80 GHz
-        (dst.)                        󰚗 LNVNB161216 (SDK0T76493 WIN)
-                                       10.53 GiB / 11.71 GiB (90%)
-                                       437.01 GiB / 474.72 GiB (92%) - NTFS
-
-                                      ● ● ● ● ● ● ● ●
-```
+![alt text](image.png)
 
 ---
 
